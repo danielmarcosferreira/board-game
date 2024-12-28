@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import View from "./components/View"
 import Sidebar from "./components/Sidebar";
 import Rentals from "./pages/Rentals";
+import NewRentalButton from "./components/NewRentalButton";
+import Customers from "./pages/Customers";
 
 function App() {
   return (
@@ -9,9 +11,11 @@ function App() {
       <View>
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Rentals />} />
+          <Route path="/" element={<Navigate to="/rentals" />} />
+          <Route path="/rentals" element={<Rentals />} />
+          <Route path="/customers" element={<Customers />} />
         </Routes>
-        {/* <NewRentalButton /> */}
+        <NewRentalButton />
       </View>
     </Router>
   )
