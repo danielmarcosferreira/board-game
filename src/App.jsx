@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Rentals from "./pages/Rentals";
 import NewRentalButton from "./components/NewRentalButton";
 import Customers from "./pages/Customers";
+import Games from "./pages/Games";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Navigate to="/rentals" />} />
           <Route path="/rentals" element={<Rentals />} />
           <Route path="/customers" element={<Customers />} />
+          <Route path="/games" element={<Games />} />
         </Routes>
         <NewRentalButton />
       </View>
