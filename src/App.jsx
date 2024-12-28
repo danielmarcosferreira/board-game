@@ -6,6 +6,8 @@ import NewRentalButton from "./components/NewRentalButton";
 import Customers from "./pages/Customers";
 import Games from "./pages/Games";
 import NewRental from "./pages/NewRental";
+import NewCustomer from "./pages/NewCustomer";
+import Customer from "./pages/Customer";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/customers" element={<Customers />} />
           <Route path="/games" element={<Games />} />
           <Route path="/rentals/new" element={<NewRental />} />
+          <Route path="/customers/new" element={<NewCustomer />} />
+          <Route path="/customers/:customerId" element={<Customer />} />
         </Routes>
         <NewRentalButton />
       </View>
