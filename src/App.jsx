@@ -5,6 +5,7 @@ import Rentals from "./pages/Rentals";
 import NewRentalButton from "./components/NewRentalButton";
 import Customers from "./pages/Customers";
 import Games from "./pages/Games";
+import NewRental from "./pages/NewRental";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/rentals" element={<Rentals />} />
           <Route path="/customers" element={<Customers />} />
           <Route path="/games" element={<Games />} />
+          <Route path="/rentals/new" element={<NewRental />} />
         </Routes>
         <NewRentalButton />
       </View>
