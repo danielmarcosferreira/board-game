@@ -1,9 +1,19 @@
-function App() {
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import View from "./components/View"
+import Sidebar from "./components/Sidebar";
+import Rentals from "./pages/Rentals";
 
+function App() {
   return (
-    <>
-     <h1> Hello World</h1>
-    </>
+    <Router>
+      <View>
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<Rentals />} />
+        </Routes>
+        {/* <NewRentalButton /> */}
+      </View>
+    </Router>
   )
 }
 
