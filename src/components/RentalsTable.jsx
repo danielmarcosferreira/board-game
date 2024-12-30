@@ -13,6 +13,7 @@ export default function RentalsTable({ rentals, onAction, ...props }) {
     function destroyRental(rentalId) {
         api.destroy(rentalId).then(() => {
             onAction();
+            alert("Game succefully deleted")
         }).catch(err => {
             console.error(err);
             // alert('Não foi possível excluir aluguel!');
@@ -22,6 +23,7 @@ export default function RentalsTable({ rentals, onAction, ...props }) {
     function returnRental(rentalId) {
         api.returnRental(rentalId).then(() => {
             onAction();
+            alert("Game succefully returned")
         }).catch(err => {
             console.error(err);
             // alert('Não foi possível devolver aluguel!');
