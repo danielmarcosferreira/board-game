@@ -88,7 +88,7 @@ export default function NewRental() {
                     type="number"
                     placeholder="Digite a quantidade de dias..."
                     value={rentDays}
-                    onChange={e => setRentDays(e.target.value)}
+                    onChange={e => setRentDays(Number(e.target.value))}
                 />
 
                 <Button isLoading={loading}>Alugar</Button>
